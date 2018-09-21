@@ -8,6 +8,7 @@ import sys
 
 if __name__=="__main__":
     if len( sys.argv ) < 2:
+        print("publish force data read from imada forcegauge"
         print("usage:program <serial port> <output topic (optional, default:ForceGauge)>")
         sys.exit(0)
 
@@ -16,7 +17,7 @@ if __name__=="__main__":
     else:
         topicname = "ForceGauge"
 
-    a = ForceGaugePublisher( topicname, sys.argv[1])
+    a = ForceGaugePublisher(topicname, sys.argv[1])
 
     try:
         while True:
