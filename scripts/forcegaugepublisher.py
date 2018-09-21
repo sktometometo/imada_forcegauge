@@ -2,7 +2,7 @@
 # coding: utf-8
 
 import rospy
-from amada_forcegauge.msg import ForceGaugeData
+from imada_forcegauge.msg import ForceGaugeData
 from forcegauge import ForceGauge
 import time
 import sys

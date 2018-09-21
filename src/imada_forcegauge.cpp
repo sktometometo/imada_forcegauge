@@ -1,18 +1,18 @@
-#include "amada_forcegauge.hpp"
+#include "imada_forcegauge.hpp"
 
 #include <iostream>
 #include <cstdlib>
 #include <string>
 
-AmadaForcegauge::AmadaForcegauge( std::string path_device )
+ImadaForcegauge::ImadaForcegauge( std::string path_device )
     : SerialDevice( path_device, 19200 )
 {
 
 }
 
-double AmadaForcegauge::read()
+double ImadaForcegauge::read()
 {
-    unsigned char buf[] = { AMADA_FORCEGAUGE_COMMAND_READ, '\r' };
+    unsigned char buf[] = { IMADA_FORCEGAUGE_COMMAND_READ, '\r' };
     this->serial_send( buf, sizeof(buf) );
     std::cout << "fuga" << std::endl;
     

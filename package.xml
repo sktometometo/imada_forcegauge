@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>amada_forcegauge</name>
+  <name>imada_forcegauge</name>
   <version>0.0.0</version>
-  <description>The amada forcegauge package</description>
+  <description>The imada forcegauge package</description>
 
   <maintainer email="sktometometo@gmail.com">sktometometo</maintainer>
 

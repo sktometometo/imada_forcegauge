@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-Amada の フォースゲージのドライバとなるクラス
+Imada の フォースゲージのドライバとなるクラス
 """
 
 import serial

@@ -1,11 +1,11 @@
-#include "amada_forcegauge.hpp"
+#include "imada_forcegauge.hpp"
 
 #include <iostream>
 #include <string>
 #include <csignal>
 #include <cstdlib>
 
-AmadaForcegauge *a;
+ImadaForcegauge *a;
 
 void sigint( int hoge )
 {
@@ -22,7 +22,7 @@ int main( int argc, char **argv )
 
     std::string serialport( argv[1] );
     try {
-        a = new AmadaForcegauge( serialport );
+        a = new ImadaForcegauge( serialport );
     } catch( int error ) {
         std::cout << "object generation error" << std::endl;
         std::exit(1);

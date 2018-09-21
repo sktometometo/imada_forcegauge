@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(amada_forcegauge)
+project(imada_forcegauge)
 
 find_package(catkin REQUIRED COMPONENTS
   message_generation
@@ -26,7 +26,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable( amada_forcegauge_test src/amada_forcegauge_test.cpp src/amada_forcegauge.cpp src/serial_device_class.cpp)
+add_executable( imada_forcegauge_test src/imada_forcegauge_test.cpp src/imada_forcegauge.cpp src/serial_device_class.cpp)
 add_definitions(-std=c++11)
 
 install(PROGRAMS
