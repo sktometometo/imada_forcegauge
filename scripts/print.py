@@ -14,6 +14,7 @@ from forcegauge import ForceGauge
 if __name__=="__main__":
 
     if len( sys.argv ) != 2:
+        print("print force gauge data")
         print("usage:program <serial port>")
         sys.exit(1)
 
