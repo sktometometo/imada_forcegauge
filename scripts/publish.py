@@ -6,13 +6,13 @@ from forcegaugepublisher import ForceGaugePublisher
 import time
 import sys
 
-if __name__=="__main__":
-    if len( sys.argv ) < 2:
-        print("publish force data read from imada forcegauge"
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("publish force data read from imada forcegauge")
         print("usage:program <serial port> <output topic (optional, default:ForceGauge)>")
         sys.exit(0)
 
-    if len ( sys.argv ) > 2:
+    if len(sys.argv) > 2:
         topicname = sys.argv[2]
     else:
         topicname = "ForceGauge"
@@ -20,9 +20,10 @@ if __name__=="__main__":
     a = ForceGaugePublisher(topicname, sys.argv[1])
 
     try:
-        while True:
+        r = rospy.Rate(100)  # 100Hz
+        while not rospy.is_shutdown():
             a.publish()
-            time.sleep(0.1)
+            r.sleep()
 
     except KeyboardInterrupt:
         del a
